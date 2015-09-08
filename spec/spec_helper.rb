@@ -1,3 +1,5 @@
+require 'byebug'
+
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
 
@@ -24,7 +26,7 @@ ENV["MONGOID_SPEC_PORT"] ||= "27017"
 HOST = ENV["MONGOID_SPEC_HOST"]
 PORT = ENV["MONGOID_SPEC_PORT"].to_i
 
-Mongo::Logger.logger.level = Logger::INFO
+Mongo::Logger.logger.level = Logger::DEBUG #INFO
 # Mongoid.logger.level = Logger::DEBUG
 
 # When testing locally we use the database named mongoid_test. However when

@@ -1,4 +1,5 @@
-source "https://rubygems.org"
+# source "https://rubygems.org"
+source 'http://ruby.taobao.org'
 
 gemspec
 
@@ -13,3 +14,6 @@ group :test do
     gem "coveralls", require: false
   end
 end
+
+# add by cao
+gem 'byebug'
